@@ -1,0 +1,135 @@
+.page-color {
+    background-color: #41315e;
+}
+
+.font-color {
+    color: rgb(255, 197, 62);
+}
+
+hr {
+    border-top: 1px solid rgb(255, 197, 62);
+}
+
+textarea, option, select, .box-color, input[type=text]{
+    background-color: rgb(66, 66, 66);
+    border: none;
+}
+
+label {
+    vertical-align: top;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.btn-default, .btn-default:visited {
+    background: rgb(66, 66, 66);
+    color: rgb(255, 197, 62);
+    border: none;
+}
+
+.btn-default:hover, .btn-default:focus {
+    background: rgb(52, 52, 52);
+    color: rgb(255, 197, 62);
+    border: none;
+}
+
+.btn-primary, .btn-primary:visited {
+    background: orange;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: rgb(190, 123, 0);
+    border: none;
+}
+
+.center-container {
+    position: relative;
+    left: 25%;
+    width: 100%;
+}
+
+.comment-container {
+    padding-right: 20%;
+}
+
+.navbar-dark {
+    background-color: rgb(38, 38, 38);
+    border: none;
+    border-width:0;
+}
+
+.navbar li a:hover, .navbar li a:focus {
+    background-color: rgb(38, 38, 38);
+    color: purple;
+}
+
+.navbar li a {
+    color: white;
+}
+
+.techfont {
+    font-family: 'Anta',sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.bigbrand {
+    font-size: 1.5em; 
+}
+
+.centerstage {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textalign {
+    margin-left: 17%;
+}
+
+.postdate {
+    text-align: center;
+}
+
+.posttitle {
+    font-family: 'Anta',sans-serif;
+    font-size: 3em;
+}
+
+.contenttext {
+    font-family: 'Kode Mono';
+    font-size: 1.5em;
+    color: rgb(255, 197, 62);
+}
+
+.btn-comment {
+    position: absolute;
+    right: 0px;
+}
+
+/* Autocomplete color correction in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(255, 197, 62);
+    -webkit-box-shadow: 0 0 0px 1000px rgb(66, 66, 66) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.ql-toolbar, .ql-snow {
+    background: rgb(255, 197, 62);
+}
+
+.ql-editor {
+    font-family: 'Kode Mono';
+    font-size: 1.5em;
+    background: rgb(66, 66, 66);
+}

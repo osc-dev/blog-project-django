@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+    <!-- Custom JS -->
+    <link rel="stylesheet" href="{% static '.js/blog.js' %}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+</head>
+
+<body class="loader page-color">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark techfont custom-navbar">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand bigbrand" href="{% url 'post_list' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="https://www.github.com/osc-dev" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/omaer-chaudhry" target="_blank">LinkedIn</a></li>
+            </ul>
+
+            <!-- Welcome page and options after login -->
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="{% url 'post_new' %}">New Post</a>
+                </li>
+                <li>
+                    <a href="{% url 'post_draft_list' %}">Drafts</a>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}">Log Out</a>
+                </li>
+                <li>
+                    <a>Welcome: {{user.username}}</a>
+                </li>
+                {% else %}
+                    <li><a class="nav navbar-right" href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content container"></div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blog_posts center-container">
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+</body>
+</html>
